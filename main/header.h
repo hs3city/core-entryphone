@@ -46,6 +46,7 @@ private:
 // ================
 
 void wifiConnect(const char[],const char[], std::function<void ()>);
+void wifiConnect(const char ssid[],const char pass[]);
 
 class server
 {
