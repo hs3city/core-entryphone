@@ -1,13 +1,11 @@
-#include "classes.h"
+#include "header.h"
 
 //=================
 // Configuration
 // ================
 
-// Pins
 const int ENTRYPHONE_PIN = 5;
-
-const int PORT = 80;
+const int SERVER_PORT = 80;
 
 // WIFI credentials -- to be removed
 const char* ssid = "hackerspace";
@@ -18,12 +16,11 @@ const char* password = "hackerspace";
 // ================
 
 indicator Indicator(LED_BUILTIN);
-server Server(PORT);
+server Server(SERVER_PORT);
+door Door(ENTRYPHONE_PIN);
 
 void setup()
 {
-    Serial.begin(9600); //is this mandatory???
-
     wifiConnect(ssid, password, []()
     {
         Indicator.blink();
@@ -32,10 +29,9 @@ void setup()
     Server.init();
 
     // Prints own ip
+    Serial.begin(9600);
     Serial.println(WiFi.localIP());
 }
-
-door Door(ENTRYPHONE_PIN);
 
 void loop() 
 {

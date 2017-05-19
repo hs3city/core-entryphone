@@ -7,34 +7,53 @@
 
 #include <functional>
 
-class indicator
+//=================
+// Pin operators
+// ================
+
+class pinOperator
 {
-private:
+protected:
     int PIN;
+    pinOperator(int pin)
+    {
+        PIN = pin;
+        pinMode(PIN, OUTPUT);
+    }
+};
+
+class indicator: pinOperator
+{
 public:
     indicator(int);
     void blink();
+private:
+    void on();
+    void off();
 };
 
-class door
+class door: pinOperator
 {
-private:
-    int PIN;
 public:
     door(int);
     void open();
+private:
     void close();
 };
+
+//=================
+// Network
+// ================
 
 void wifiConnect(const char[],const char[], std::function<void ()>);
 
 class server
 {
-private:
-    WiFiServer* _server;
 public:
     server(unsigned short int);
     ~server();
     void handleRequest(std::function<void ()>);
     void init();
+private:
+    WiFiServer* _server;
 };
