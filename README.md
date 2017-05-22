@@ -23,6 +23,7 @@ Current maintainer: [Allgreed](https://github.com/allgreed)
 
 To begin you'll need to have installed:
 
+- [Arduino IDE](https://www.arduino.cc/en/main/software)
 !!! TODO !!!
 
 ## Setup
@@ -40,12 +41,16 @@ To begin you'll need to have installed:
     ```    
     
 
+## The device
+
 !!! TODO !!!
 
 ## Dev
 
-!!! TODO !!!
+1. Open contents of ```main``` folder in Arudino IDE
+2. Write your code
 
 ## Shoutout
 
-!!! TODO !!!
+Daniel "Lata" Kasprzyk - providing initial POC for the code 
+Krzysztof Mróz - consulting on EEPROM data storage
