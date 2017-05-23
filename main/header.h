@@ -53,7 +53,7 @@ class server
 public:
     server(unsigned short int);
     ~server();
-    void handleRequest(std::function<void ()>);
+    void handleRequest(unsigned int, std::function<void ()>);
     void init();
 private:
     WiFiServer* _server;

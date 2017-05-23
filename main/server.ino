@@ -1,14 +1,25 @@
 #include "header.h"
 
-void server::handleRequest(std::function<void ()> onReqest)
+void server::handleRequest(unsigned int timeout, std::function<void ()> onReqest)
 {
     // Check if a client has connected
     WiFiClient Client = _server->available();
     // Try again if not
     if (!Client) return;
 
+    int requestTime = 0;
+
     // Wait for data
-    while(!Client.available()) delay(1);
+    while(!Client.available())
+    {
+        delay(1);
+        requestTime++;
+        if(requestTime > timeout)
+        {
+            Client.flush();
+            return;
+        }
+    }
 
     // If the request is not a favicon, handle it
     if(!(Client.readStringUntil('\r').indexOf("/favicon") != -1))
@@ -20,7 +31,6 @@ void server::handleRequest(std::function<void ()> onReqest)
     Client.println("HTTP/1.1 200 OK");
 
     // Get ready for next request
-    delay(1);
     Client.flush();
 }
 

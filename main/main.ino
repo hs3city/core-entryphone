@@ -6,6 +6,7 @@
 
 const int ENTRYPHONE_PIN = 5;
 const int SERVER_PORT = 80;
+const int REQUEST_TIEMOUT = 1000;
 
 // WIFI credentials -- to be removed
 const char* ssid = "hackerspace";
@@ -35,7 +36,7 @@ void setup()
 
 void loop() 
 {
-    Server.handleRequest([]()
+    Server.handleRequest(REQUEST_TIEMOUT ,[]()
     {
         Door.open();
     });
