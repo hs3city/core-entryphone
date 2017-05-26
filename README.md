@@ -1,5 +1,16 @@
 # core-entryphone
 
+  * [Overview](#overview)
+  * [Contributing](#contributing)
+     * [Submit ideas and reporting bugs](#submit-ideas-and-reporting-bugs)
+     * [Look for bugs](#look-for-bugs)
+     * [Other / Code](#other--code)
+  * [Prerequisites](#prerequisites)
+  * [Setup](#setup)
+  * [The device](#the-device)
+  * [Dev](#dev)
+  * [Shoutout](#shoutout)
+
 ## Overview
 
 Type: Infrastructure     
@@ -52,5 +63,5 @@ To begin you'll need to have installed:
 
 ## Shoutout
 
-Daniel "Lata" Kasprzyk - providing initial POC for the code 
+Daniel "Lata" Kasprzyk - providing initial POC for the code     
 Krzysztof Mróz - consulting on EEPROM data storage
