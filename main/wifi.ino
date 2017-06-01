@@ -13,6 +13,7 @@ void wifiConnect(const char ssid[],const char pass[], std::function<void ()> onN
 
 void wifiConnect(const char ssid[],const char pass[])
 {
+    WiFi.config(ip, gateway, subnet);
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, pass);
 }

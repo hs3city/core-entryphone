@@ -12,6 +12,12 @@ const int REQUEST_TIEMOUT = 1000;
 const char* ssid = "hackerspace";
 const char* password = "hackerspace";
 
+// IP consts -- to be removed
+// Sets static IP for the device
+const IPAddress ip(192, 168, 0, 10);
+const IPAddress gateway(192, 168, 0, 1);
+const IPAddress subnet(255, 255, 255, 0);
+
 //=================
 // Main
 // ================
