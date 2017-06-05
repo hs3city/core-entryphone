@@ -28,7 +28,9 @@ Current maintainer: [Allgreed](https://github.com/allgreed)
 
 ### Other / Code
 
-!!! TODO !!!
+1. Fork the repo
+2. Write your code
+3. Propose a pull request
 
 ## Prerequisites
 
@@ -42,7 +44,7 @@ To begin you'll need to have installed:
 1. Clone the repo
 
     ```sh
-        $ git clone https://github.com/hs3city/[ !!! TODO !!!]
+        $ git clone https://github.com/hs3city/core-entryphone
     ```    
     
 2. Navigate to the main folder
